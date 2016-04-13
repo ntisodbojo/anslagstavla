@@ -13,11 +13,11 @@ def busstop():
 
 @app.route('/api/v1/menu')
 def menu():
-    return "10:11"
+    return "{'huvudalternativ':'korv','Vehet':'curry'}"
 
 @app.route('/api/v1/messages')
 def messages():
-    return "10:11"
+    return "meddelanden"
 
 
 if __name__ == '__main__':

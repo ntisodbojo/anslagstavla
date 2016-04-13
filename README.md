@@ -1,16 +1,11 @@
-matsedel - farah
+matsedel 
+meddelanden - bogdan
+busslista - robin
+tåglista - christian
+närvarande - fadi
+smhi 
+powerswitch - imir
 
-meddelanden - fadi
-
-buslista - robin
-
-tåglista -christian
-
-närvarande - bogdan
-
-smhi - filip
-
-powerswitch - imir 
-
+anslagstavlan - fixa till ramverket
 
 
