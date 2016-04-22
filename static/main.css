@@ -1,0 +1,17 @@
+body{
+
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+    margin: 0px;
+}
+
+#page{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    background-color: blue;
+}
+
+
+
