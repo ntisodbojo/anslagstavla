@@ -1,0 +1,38 @@
+<style>
+
+#busstop{
+    width: 1000px ;
+    height: 500px;
+    margin: auto;
+
+}
+
+</style>
+
+<div class="page">
+    <div id="busstop">
+        <h1>busstop by robin</h1>
+        <p id="busnr">bussnummer</p>
+    </div>
+</div>
+
+
+<script>
+
+function update_busstop() {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("busnr").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "/api/v1/busstop", true);
+  xhttp.send();
+
+  setTimeout("update_busstop()",5000);
+}
+
+update_busstop();
+
+</script>
