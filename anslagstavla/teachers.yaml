@@ -1,0 +1,14 @@
+# list teacher devices
+teachers:
+    bosse:
+      - 38:AA:3C:67:09:F1  #mobile
+      - 8c:70:5a:59:bb:fc  #level42
+      - 78:31:C1:CE:D8:70  #babblefish
+
+
+# list  devices to skip
+skip:
+  - 00:20:6B:69:F2:FC # Konica printer
+  - 5C:83:8F:22:7F:5B # router/gateway
+
+
