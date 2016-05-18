@@ -2,10 +2,13 @@ import sys,os
 from glob import glob
 import os
 from flask import Flask, render_template, jsonify, make_response
+import json
 
 
 
 basepath = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir))
+
+whoshere2_file=os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__))),"whoshere2.json")
 
 
 sys.path.append(os.path.join(basepath,"matsedel"))
@@ -38,6 +41,13 @@ def matsedel():
 
     return make_response(jsonify(thisweek.weekmenu()))
 
+
+@app.route('/api/v1/whoshere')
+def whoshere():
+
+     with open(whoshere2_file, 'r') as f:
+        whoshere_data = json.load(f)
+     return make_response(jsonify(whoshere_data))
 
     # hostname = "192.168.80.150"
     # response = os.system("ping -c 1 -W 1" + hostname)

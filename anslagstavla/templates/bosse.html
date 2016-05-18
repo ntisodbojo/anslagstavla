@@ -1,0 +1,51 @@
+<style>
+
+#bosse{
+    width: 1000px ;
+    height: 500px;
+    margin: auto;
+
+}
+
+</style>
+
+<div class="page">
+    <div id="bosse">
+        <h1>bosse by bosse</h1>
+        <table>
+            <tr><td id="monday">måndag</td></tr>
+            <tr><td id="tuesday">tisdag</td></tr>
+            <tr><td id="wednesday">onsdag</td></tr>
+        </table>
+    </div>
+</div>
+
+
+<script>
+
+function update_bosse() {
+
+  // create ajax
+  var xhttp = new XMLHttpRequest();
+
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+        // Javascript function JSON.parse to parse JSON data
+        var weekmenu = JSON.parse(xhttp.responseText);
+
+
+
+        document.getElementById("monday").innerHTML = weekmenu.monday["Vegetariskt alternativ"];
+        document.getElementById("tuesday").innerHTML = weekmenu.tuesday["Vegetariskt alternativ"];
+        document.getElementById("wednesday").innerHTML = weekmenu.wednesday["Vegetariskt alternativ"];
+    }
+  };
+  xhttp.open("GET", "/api/v1/matsedel", true);
+  xhttp.send();
+
+  setTimeout(update_bosse,5000);
+}
+
+update_bosse();
+
+</script>

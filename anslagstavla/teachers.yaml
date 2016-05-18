@@ -4,7 +4,10 @@ teachers:
       - 38:AA:3C:67:09:F1  #mobile
       - 8c:70:5a:59:bb:fc  #level42
       - 78:31:C1:CE:D8:70  #babblefish
-
+    robert:
+      - bdfgfdgg
+    hiba:
+      - dfdsfdsfdsf
 
 # list  devices to skip
 skip:
