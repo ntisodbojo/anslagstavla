@@ -7,6 +7,7 @@
     <orderEntry type="module" module-name="matsedel" />
     <orderEntry type="module" module-name="messages" />
     <orderEntry type="module" module-name="errorweb" />
+    <orderEntry type="module" module-name="whoshere" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
